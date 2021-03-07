@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>ShopHour</title>
+  </head>
+  <body>
+    <header class="header">
+      <a id="big-logo" href="index.html" class="header__logo-box">
+        Shop<span class="header__logo-box--bold">Hour</span>
+      </a>
+      <a id="small-logo" href="index.html" class="header__logo-box">
+        S<span class="header__logo-box--bold">H</span>
+      </a>
+      <div class="header__search">
+        <input type="text" class="header__search-box" placeholder="Search...">
+      </div>
+      <nav>
+          <a href="index.html">Home</a>
+          <a href="#clothes">Clothes</a>
+          <a href="#accessories">Accessories</a>
+      </nav>
+  
+      <div class="header__cart-account">
+        <a href="checkout.html" class="header__shop-cart">
+          <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+          <div id="shop-cart--items"></div>
+        </a>
+        <div class="header__account">
+          <i class="fa fa-user" aria-hidden="true"></i>
+        </div>
+      </div>
+
+    </header>
+
+    <section id="cart-has-items" class="checkout">
+      <h1 class="checkout__heading">Checkout</h1>
+      <h3 class="checkout__items">
+        Total Distinct Items: <span id="total-items"></span>
+      </h3>
+      <div class="checkout__box">
+        <div id="checkout-info" class="checkout__box--info">
+
+          <!-- BELOW IS A TEMPLATE OF DIVS THAT JS CREATES -->
+          <!-- <div>
+            <img
+              src="https://assets.myntassets.com/h_1440,q_100,w_1080/v1/assets/images/productimage/2018/9/19/b1373b00-37d4-41a0-a908-5d742a68d3661537343756229-1.jpg"
+              alt=""
+            />
+            <div class="checkout__box--description">
+              <h3>Men Black Action Parkview Lifestyle Shoes</h3>
+              <p>x2</p>
+              <p>Amount: Rs 55992</p>
+            </div>
+          </div> -->
+
+        </div>  
+        <div class="checkout__box--order">
+          <h3>Total Amount</h3>
+          <p>Amount: Rs <span id="total-amount"></span></p>
+          <button id="place-order">Place Order</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="no-cart-items" class="no-cart-items">
+      <h2>No Items in the Cart!!</h2>
+      <div>
+        <i class="fas fa-7x fa-spinner"></i>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="contact">
+        <h3>CONTACT</h3>
+        <p>Email: kaarthik@ShopHour.com</p>
+        <p>Phone: 888-888-8888</p>
+      </div>
+      <div class="shopping-links">
+        <h3>Shopping Links</h3>
+        <a href="#">ShopClass</a>
+        <a href="#">CoolClothes</a>
+        <a href="#">FashionStreet</a>
+      </div>
+      <div class="address">
+        <h3>Address</h3>
+        <p>Building 23-b</p>
+        <p>South Beach</p>
+        <p>San Jose</p>
+        <p>California</p>
+      </div>
+    </footer>
+    <script src="../js/checkout.js"></script>
+  </body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>ShopHour</title>
+  </head>
+  <body>
+    <header class="header">
+      <a id="big-logo" href="index.html" class="header__logo-box">
+        Shop<span class="header__logo-box--bold">Hour</span>
+      </a>
+      <a id="small-logo" href="index.html" class="header__logo-box">
+        S<span class="header__logo-box--bold">H</span>
+      </a>
+      <div class="header__search">
+        <input type="text" class="header__search-box" placeholder="Search..." />
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="#clothes">Clothes</a>
+        <a href="#accessories">Accessories</a>
+      </nav>
+
+      <div class="header__cart-account">
+        <a href="checkout.html" class="header__shop-cart">
+          <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+          <div id="shop-cart--items"></div>
+        </a>
+
+        <div class="header__account">
+          <i class="fa fa-user" aria-hidden="true"></i>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="details">
+        <div class="details__imgs">
+          <div class="details__imgs-main">
+            <img src="#" alt="" />
+          </div>
+          <div class="details__imgs-previews">
+            <!-- DIVs will be injected by JS -->
+          </div>
+        </div>
+
+        <div class="details__description">
+          <div class="details__description-name">
+            <h1 id="product-name"></h1>
+          </div>
+          <div class="details__description-brand">
+            <h2 id="product-brand"></h2>
+          </div>
+          <div class="details__description-price">
+            <h3>Price: Rs <span id="product-price"></span></h3>
+          </div>
+          <div class="details__description-info">
+            <h4>Description:</h4>
+            <p id="product-description"></p>
+          </div>
+
+          <div class="details__cart-btn">
+            <button id="cart-btn">Add To Cart</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="contact">
+        <h3>CONTACT</h3>
+        <p>Email: kaarthik@ShopHour.com</p>
+        <p>Phone: 888-888-8888</p>
+      </div>
+      <div class="shopping-links">
+        <h3>Shopping Links</h3>
+        <a href="#">ShopClass</a>
+        <a href="#">CoolClothes</a>
+        <a href="#">FashionStreet</a>
+      </div>
+      <div class="address">
+        <h3>Address</h3>
+        <p>Building 23-b</p>
+        <p>South Beach</p>
+        <p>San Jose</p>
+        <p>California</p>
+      </div>
+    </footer>
+    <script src="../js/details.js"></script>
+  </body>
+</html>
