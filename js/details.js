@@ -1,7 +1,12 @@
+// Get the URL params for product id
 const url_string = window.location.href
 const url = new URL(url_string);
 const id = url.searchParams.get("id");
+
+// API for product details
 const itemURL = 'https://5d76bf96515d1a0014085cf9.mockapi.io/product/'+id+'/'
+
+//Get relevent DOM elements
 const mainImg = document.getElementsByClassName('details__imgs-main')
 const previewImgs = document.getElementsByClassName('details__imgs-previews')
 const productName = document.getElementById('product-name');
@@ -11,9 +16,9 @@ const description = document.getElementById('product-description');
 const addToCart = document.getElementById('cart-btn');
 const cartItems = document.getElementById('shop-cart--items');
 
+
 let xhr = new XMLHttpRequest();
 xhr.open('GET', itemURL, true);
-
 // Calls API, gets and sets Main and preview Images
 xhr.onreadystatechange = function() {
   if (this.readyState === 4 && this.status === 200) {
@@ -28,7 +33,8 @@ xhr.onreadystatechange = function() {
       preview.src = photo;
       previewImgs[0].appendChild(preview);
     })
-
+    
+    // Update DOM Elements     
     productName.innerText = response.name;
     brand.innerText = response.brand;
     price.innerText = response.price;
@@ -47,6 +53,7 @@ previewImgs[0].addEventListener('click', function(e) {
   }
 })
 
+//Updates and displays cart items
 function updateCart() {
   if(localStorage.getItem('shopHourCart')) {
     let cart = JSON.parse(localStorage.getItem('shopHourCart'));
