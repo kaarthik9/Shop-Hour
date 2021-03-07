@@ -85,7 +85,8 @@ if (localStorage.getItem("shopHourCart")) {
 
         infoDiv.appendChild(itemImage);
         infoDiv.appendChild(descriptionDiv);
-
+        
+        //Append all elements to container
         checkoutInfoBox.appendChild(infoDiv);
 
         itemCount++;
@@ -126,6 +127,7 @@ orderBtn.addEventListener("click", function() {
 
   xhr.onreadystatechange = function () {
     if (this.readyState === 4 && this.status === 200) {
+      
       // Update cart and redirect to confirmation page
       localStorage.removeItem("shopHourCart")
       window.location.href = "confirmation.html";
